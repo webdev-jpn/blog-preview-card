@@ -1,0 +1,116 @@
+body {
+  font-family: "Figtree", sans-serif;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 7%);
+  background-color: hsl(47deg, 88%, 63%);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  max-width: 327px;
+  width: 100%;
+  background-color: hsl(0deg, 0%, 100%);
+  border: 1px solid hsl(0deg, 0%, 7%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px clamp(8px, 6.4vw, 24px);
+  box-shadow: 10px 10px 0px 0px hsl(0deg, 0%, 7%);
+}
+
+.card__image,
+.card__content,
+.card__author {
+  max-width: 279px;
+  width: 100%;
+}
+
+.card__image {
+  max-width: 279px;
+  width: 100%;
+}
+.card__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card__content-tag {
+  background-color: hsl(47deg, 88%, 63%);
+  border-radius: 4px;
+  align-self: flex-start;
+  font-size: 12px;
+  padding: 4px 12px;
+}
+.card__content-tag span {
+  font-weight: 800;
+}
+
+.card__content-date {
+  font-size: 12px;
+}
+.card__content-title a {
+  color: hsl(0deg, 0%, 7%);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.card__content-title a:hover {
+  color: hsl(47deg, 88%, 63%);
+}
+.card__content-title a:focus-visible {
+  outline: 2px solid hsl(47deg, 88%, 63%);
+  outline-offset: 4px;
+}
+.card__content-title a:active {
+  color: #f1c31e;
+}
+.card__content-title a.is-error {
+  color: red;
+}
+.card__content-title h1 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.card__content-text p {
+  color: hsl(0deg, 0%, 42%);
+  font-size: 14px;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+}
+
+.card__author-image {
+  margin-right: 12px;
+}
+.card__author-image img {
+  width: 32px;
+  height: 32px;
+}
+
+.card__author-name {
+  display: flex;
+  align-items: center;
+}
+.card__author-name span {
+  font-size: 14px;
+  font-weight: 800;
+}
