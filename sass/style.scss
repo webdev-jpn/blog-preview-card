@@ -50,6 +50,10 @@ body {
   gap: 24px;
   padding: 24px clamp(8px, 6.4vw, 24px);
   box-shadow: 10px 10px 0px 0px $gray950;
+
+  @include mq(pc) {
+    min-width: 384px;
+  }
 }
 
 .card__image,
@@ -57,15 +61,24 @@ body {
 .card__author {
   max-width: 279px;
   width: 100%;
+
+  @include mq(pc) {
+    min-width: 336px;
+  }
 }
 
 .card__image {
   max-width: 279px;
   width: 100%;
 
+  @include mq(pc) {
+    max-width: 336px;
+    max-height: 200px;
+  }
+
   img {
     width: 100%;
-    height: auto;
+    height: 200px;
     display: block;
     border-radius: 10px;
   }
@@ -84,6 +97,10 @@ body {
   font-size: 12px;
   padding: 4px 12px;
 
+  @include mq(pc) {
+    font-size: 14px;
+  }
+
   span {
     font-weight: $font-weight-bold;
   }
@@ -91,6 +108,11 @@ body {
 
 .card__content-date {
   font-size: 12px;
+
+  @include mq(pc) {
+    font-size: 14px;
+  }
+
   time {
   }
 }
@@ -122,6 +144,10 @@ body {
   h1 {
     font-size: 20px;
     font-weight: $font-weight-bold;
+
+    @include mq(pc) {
+      font-size: 24px;
+    }
   }
 }
 
@@ -129,6 +155,11 @@ body {
   p {
     color: $gray500;
     font-size: 14px;
+
+    @include mq(pc) {
+      font-size: 16px;
+      letter-spacing: 0.005em;
+    }
   }
 }
 

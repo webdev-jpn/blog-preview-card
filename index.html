@@ -30,10 +30,18 @@
     <main class="container">
       <div class="card">
         <div class="card__image">
-          <img
-            src="./images/card-image.png"
-            alt="Illustration for the article HTML & CSS foundations"
-          />
+          <picture>
+            <!-- Pic for PC -->
+            <source
+              media="(min-width: 1440px)"
+              srcset="./images/card-image-pc.png"
+            />
+            <!-- Pic for Mobile -->
+            <img
+              src="./images/card-image.png"
+              alt="Illustration for the article HTML & CSS foundations"
+            />
+          </picture>
         </div>
         <div class="card__content">
           <div class="card__content-tag">
